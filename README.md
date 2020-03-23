@@ -30,5 +30,5 @@ To demonstrate ability to create APIs on Python 3 and Flask and to study how to 
 1) Example input data conatined within Python3FlaskAPI/data/output.json file
 2) ouput.json named like so because it actually an output file of the project - codesamples-python-scrapy-scrap-golang-site - https://github.com/giantpanda9/codesamples-python-scrapy-scrap-golang-site
 3) The virtualenv project kept under development settings in virtualenv during the development 
-4) project kept with simple structure to allow quick overview - I know MVC pattern, but shall demonstrate this abilty in dedicated project, if you do not mind - and this is solely to demonstrate the API creation abilities
+4) Project kept with simple structure to allow quick overview - I know about the MVC pattern, but shall demonstrate this abilty in dedicated project, if you do not mind - and this is solely to demonstrate the API creation abilities
 5) Logic is similar to https://github.com/giantpanda9/codesamples-golang-gorilla-mux-api and https://github.com/giantpanda9/codesamples-golang-gorilla-mux-api-no-marshall-edition
