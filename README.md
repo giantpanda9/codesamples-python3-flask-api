@@ -22,7 +22,7 @@ To demonstrate ability to create APIs on Python 3 and Flask and to study how to 
 9) sudo ufw allow 5000
 10) python Python3FlaskAPI.py
 11) [optional, done playing?] deactivate
- # How to run?
+# How to run?
 1) 127.0.0.1:5000/pythonapi/getdata/all - should return all the data available
 2) http://127.0.0.1:5000/pythonapi/getdata/byname?name=rsa - should return data for Go lang rsa module
 3) http://127.0.0.1:5000/pythonapi/getdata/bydate?date=February%202019 - should return information about Go release from February 2019
