@@ -16,8 +16,8 @@ To demonstrate ability to create APIs on Python 3 and Flask and to study how to 
 4) virtualenv Python3FlaskAPI
 5) source Python3FlaskAPI/bin/activate
 6) pip install gunicorn flask
-7) copy the file to Python3FlaskAPI/ (just near the second folder Python3FlaskAPI in Python3FlaskAPI folder)
-8) copy the file data/output.json (the whole folder) to the secondary Python3FlaskAPI folder inside the project or simply copy /Python3FlaskAPI fodler from the git to the Flask virtualenv'ed project folder
+7) copy the files to Python3FlaskAPI/ (just near the second folder Python3FlaskAPI in Python3FlaskAPI folder) or clone project the there
+8) copy the file data/output.json (the whole folder) to the project or clone the whole project into virtualenv'ed directory on localhost
 9) Overall you structure should be similar to the one in github except for the files created by Flask
 9) sudo ufw allow 5000
 10) python Python3FlaskAPI.py
