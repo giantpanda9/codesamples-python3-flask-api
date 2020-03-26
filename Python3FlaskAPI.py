@@ -1,15 +1,11 @@
+# Data Controller
+
 import flask
 from flask import request, jsonify
-import json
+from Python3FlaskAPI_Model import APIClass
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
-
-def getFile():
-	allData = open("Python3FlaskAPI/data/output.json", "rt")
-	allDataJson = allData.read()
-	allData.close()
-	return allDataJson
 
 @app.route('/', methods=['GET'])
 def entry():
@@ -17,8 +13,10 @@ def entry():
 
 @app.route('/pythonapi/getdata/all', methods=['GET'])
 def getData():
-	returned = getFile()
-	return returned
+	APIClassInstance = APIClass()
+	# In this case we do not actually need an object to match
+	APIResponse = APIClassInstance.getFile() # so loading just JSON data directly from file and using the function to load JSON file
+	return APIResponse
 
 @app.route('/pythonapi/getdata/byname', methods=['GET'])
 def getDataByName():
@@ -27,8 +25,9 @@ def getDataByName():
 		name = str(request.args['name'])
 	else:
 		return "<p style='color:red'> Sorry, error! Please provide a name you wish to get the information for. </p>"
-	allDataJson = getFile()
-	allData = json.loads(allDataJson)
+	APIClassInstance = APIClass()
+	# In this case we need List of Dictionaries to match against
+	allData = APIClassInstance.getData() # so we call for the method that returns it instead of text JSON
 	returned = ""
 	for item in allData:
 		if name == item["name"]:
@@ -43,8 +42,9 @@ def getDataByDate():
 		date = str(request.args['date'])
 	else:
 		return "<p style='color:red'> Sorry, error! Please provide a date you wish to get the Go version released at. </p>"
-	allDataJson = getFile()
-	allData = json.loads(allDataJson)
+	APIClassInstance = APIClass()
+	# In this case we need List of Dictionaries to match against
+	allData = APIClassInstance.getData() # so we call for the method that returns it instead of text JSON
 	returned = ""
 	for item in allData:
 		if date == item["date"]:
